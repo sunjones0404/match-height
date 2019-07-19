@@ -8,15 +8,24 @@
 .wrapper {
 	max-width: 1024px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .card {
-	background: #f7f7f7;
-	border: 1px solid #cccccc;
 	float: left;
 	width: calc(100% / 3 - 20px);
-	padding: 20px;
 	margin: 10px;
+}
+
+.card-content {
+	background: #f7f7f7;
+	border: 1px solid #cccccc;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
 }
 
 .heading {
@@ -49,10 +58,19 @@ button:hover {
 	opacity: 0.8;
 }
 
+.summary {
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	background: lightblue;
+	border: 1px solid skyblue;
+	color: #0c5a79;
+	border-top: none;
+}
+
 @media all and (max-width: 767px) {
 	.card {
 		width: calc(100% / 2 - 20px);
-		padding: 20px;
 		margin: 10px;
 	}
 }
@@ -60,7 +78,6 @@ button:hover {
 @media all and (max-width: 480px) {
 	.card {
 		width: calc(100% - 20px);
-		padding: 20px;
 		margin: 10px;
 	}
 }
